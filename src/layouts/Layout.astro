@@ -1,4 +1,6 @@
 ---
+import Header from './Header.astro'
+import Footer from './Footer.astro'
 interface Props {
   title: string
 }
@@ -21,9 +23,10 @@ const { title } = Astro.props
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
   </head>
-  <body class="bg-primary-600 text-white">
+  <body class="bg-primary-600 text-white" id="top">
+    <Header />
     <slot />
-
+    <Footer />
     <!-- Preline script -->
     <script is:inline src="./node_modules/preline/dist/preline.js"></script>
   </body>
