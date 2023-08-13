@@ -1,0 +1,53 @@
+---
+const logos = [
+  'refri.png',
+  'secadora.webp',
+  'refri2.png',
+  'lavadora.png',
+  'estufa.webp',
+  'refri3.png',
+  'acondicionado.webp'
+]
+---
+
+<section class="mb-24">
+  <div
+    class="relative m-auto max-w-7xl overflow-hidden before:absolute before:left-0 before:top-0 before:z-[2] before:h-full before:w-[100px] before:bg-[linear-gradient(to_right,rgba(17,24,39)_0%,rgba(255,255,255,0)_100%)] before:content-[''] after:absolute after:right-0 after:top-0 after:z-[2] after:h-full after:w-[100px] after:-scale-x-100 after:bg-[linear-gradient(to_right,rgba(17,24,39)_0%,rgba(255,255,255,0)_100%)] after:content-['']"
+  >
+    <div class="animate-infinite-slider w-[calc(500px*10)] flex md:w-[calc(250px*10)]">
+      {
+        logos.map((logo) => (
+          <div class="slide flex w-[250px] md:w-[125px] items-center justify-center mx-4">
+            <img
+              src={`./images/products/${logo}`}
+              alt={logo}
+              class="h-64 md:h-full object-contain"
+            />
+          </div>
+        ))
+      }
+      {
+        logos.map((logo) => (
+          <div class="slide flex w-[250px] md:w-[125px] items-center justify-center mx-4">
+            <img
+              src={`./images/products/${logo}`}
+              alt={logo}
+              class="h-64 md:h-full  object-contain"
+            />
+          </div>
+        ))
+      }
+      {
+        logos.map((logo) => (
+          <div class="slide flex w-[250px] md:w-[125px] items-center justify-center mx-4">
+            <img
+              src={`./images/products/${logo}`}
+              alt={logo}
+              class="h-64 md:h-full  object-contain"
+            />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

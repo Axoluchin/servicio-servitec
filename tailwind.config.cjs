@@ -21,6 +21,17 @@ module.exports = {
           600: '#111827',
           700: '#1A2336'
         }
+      },
+      animation: {
+        ['infinite-slider']: 'infiniteSlider 30s linear infinite'
+      },
+      keyframes: {
+        infiniteSlider: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': {
+            transform: 'translateX(calc(-250px * 5))'
+          }
+        }
       }
     }
   },
