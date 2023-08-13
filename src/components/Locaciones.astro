@@ -1,0 +1,44 @@
+---
+const Lista = [
+  {
+    name: 'Servitec Sur',
+    image: '1'
+  },
+  {
+    name: 'Lerma Ocoyoacac - Encinos',
+    image: '3'
+  },
+  {
+    name: 'Toluca Cacalomacan - Valle de Bravo ',
+    image: '5'
+  },
+  {
+    name: 'Metepec San Mateo',
+    image: '6'
+  },
+  {
+    name: 'Toluca Zinacantepec - Atlacomulco',
+    image: '4'
+  }
+]
+---
+
+<section class="my-8" id="Locaciones">
+  <h2 class="text-4xl text-center font-bold">Locaciones</h2>
+  <div class="grid grid-cols-2 gap-4 mt-4 px-4">
+    {
+      Lista.map((loc) => (
+        <article class="flex flex-col items-center bg-primary-700 border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl m-auto lg:w-[700px] lg:h-56">
+          <img
+            class="object-cover w-full rounded-t-lg h-full md:w-48 md:rounded-none md:rounded-l-lg"
+            src={`images/locations/loc${loc.image}.jpg`}
+            alt={loc.name}
+          />
+          <div class="flex flex-col justify-between p-4 leading-normal">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight ">{loc.name}</h5>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</section>
