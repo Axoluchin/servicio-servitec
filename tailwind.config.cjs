@@ -1,4 +1,3 @@
-import preline from 'preline/plugin.js'
 import flowbite from 'flowbite/plugin'
 
 /** @type {import('tailwindcss').Config} */
@@ -6,7 +5,6 @@ module.exports = {
   content: [
     './public/**/*.astro',
     './src/**/*.{astro,js,jsx,ts,tsx,vue}',
-    './node_modules/preline/dist/*.js',
     './node_modules/flowbite/**/*.js'
   ],
   theme: {
@@ -35,5 +33,5 @@ module.exports = {
       }
     }
   },
-  plugins: [preline, flowbite]
+  plugins: [flowbite]
 }
